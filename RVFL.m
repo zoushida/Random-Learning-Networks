@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Random Vector Functional Link Networks (Matlab)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Copyright (C) 2019 ZSD 
+% Copyright (C) 2019 Zou Shida
 %
 
 classdef RVFL
@@ -75,7 +75,7 @@ classdef RVFL
                     H = double(hardlim(H));    
                 case {'relu'}
                     H(:) = max(H(:),0);
-                case {'leakyrelu'}% Leaky ReLUº¯Êý£¨PReLU£©
+                case {'leakyrelu'}% Leaky ReLUÂºÂ¯ÃŠÃ½Â£Â¨PReLUÂ£Â©
                     H(H<0) = 0.01*H(H<0);
                     % H(:) = max(H(:),0.01*H(:));
                 case {'elu'} %ELU Exponential Linear Units
